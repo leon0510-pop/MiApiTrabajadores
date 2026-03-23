@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e8f5f3;
+    margin: 0;
+    padding: 20px;
+    background-image: url("img/fondo_2.png");
+    background-size: cover;
+    
+
+}
+
+h1 {
+    text-align: center;
+    color: #064f40;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de tabla */
+table {
+    color: whitesmoke;
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Encabezado */
+thead th {
+    background: #64d8cb;
+    padding: 12px;
+    font-size: 18px;
+    color: rgb(2, 49, 4);
+}
+
+/* Filas */
+tbody td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+tbody tr:hover {
+    background: #f0fdfb;
+    transition: 0.2s;
+    color: black;
+}
+
+/* Última fila sin borde */
+tbody tr:last-child td {
+    border-bottom: solid;
+}
+
+.btn-eliminar {
+    padding: 6px 12px;
+    border: 2px solid #d9534f;   /* rojo */
+    background: transparent;
+    color: #d9534f;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+    background: #d9534f; 
+    color: white;
+    border-color: #b52b27;
+}
+
+.btnEditar {
+    border: 2px solid #1d6fd8;   /* azul */
+    color: #1d6fd8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnEditar:hover {
+    background-color: #1d6fd8;
+    color: white;
+}
+
+.btn {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.btnAtras {
+    background-color: #001f3f;  /* azul marino */
+    color: white;               /* texto blanco */
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 12px;        /* botón redondeado */
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.btnAtras:hover {
+    background-color: #003366;  /* azul marino más claro */
+}
