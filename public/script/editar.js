@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const departamento = document.getElementById("departamento");
     const fecha = document.getElementById("fecha_contratacion");
 
-    // Cargar datos del trabajador
-    const res = await fetch(`http://localhost:3000/obtener/${id}`);
+    // ✅ OBTENER DATOS (GET correcto)
+    const res = await fetch(`https://miapitrabajadores.onrender.com/obtener/${id}`);
     const data = await res.json();
 
     nombre.value = data.nombre;
@@ -18,19 +18,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     departamento.value = data.departamento;
     fecha.value = data.fecha_contratacion;
 
-    // Guardar cambios
+    // =========================
+    // GUARDAR CAMBIOS
+    // =========================
     document.getElementById("formEditar").addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const actualizado = {
             nombre: nombre.value,
-            edad: edad.value,
+            edad: parseInt(edad.value),
             puesto: puesto.value,
             departamento: departamento.value,
             fecha_contratacion: fecha.value
         };
 
-        await fetch(`http://localhost:3000/editar/${id}`, {
+        await fetch(`https://miapitrabajadores.onrender.com/editar/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(actualizado)

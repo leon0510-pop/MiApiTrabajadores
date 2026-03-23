@@ -24,11 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Guardar en la base de datos vía backend
         try {
-            const res = await fetch("http://localhost:3000/agregar", {
+            const res = await fetch("https://miapitrabajadores.onrender.com/agregar", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(trabajador)
-            });
+                headers: {
+                "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(trabajador)
+});
 
             const data = await res.json();
             console.log(data);
